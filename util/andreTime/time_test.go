@@ -1,16 +1,17 @@
-package tikettime
+package andretime
 
 import (
-	assert2 "github.com/stretchr/testify/assert"
 	"testing"
 	"time"
+
+	assert2 "github.com/stretchr/testify/assert"
 )
 
-func GetTimeNow (tiketTime TiketTime) time.Time {
-	return tiketTime.Now()
+func GetTimeNow(andreeTime AndreTime) time.Time {
+	return andreeTime.Now()
 }
 
-func Test_TiketTime(t *testing.T) {
+func Test_AndreeTime(t *testing.T) {
 
 	t.Run("when Using fakeTime", func(t *testing.T) {
 		timeNow := time.Date(2020, time.August, 31, 0, 0, 0, 0, time.UTC)
@@ -21,9 +22,9 @@ func Test_TiketTime(t *testing.T) {
 	})
 
 	t.Run("when Using realTime", func(t *testing.T) {
-		tiketTime := NewRealTime()
-		response := GetTimeNow(tiketTime)
+		andreeTime := NewRealTime()
+		response := GetTimeNow(andreeTime)
 
-		assert2.NotEqual(t, tiketTime.Now(), response)
+		assert2.NotEqual(t, andreeTime.Now(), response)
 	})
 }

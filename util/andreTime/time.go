@@ -1,9 +1,8 @@
-package tikettime
+package andretime
 
 import "time"
 
-
-type TiketTime interface {
+type AndreTime interface {
 	Now() time.Time
 }
 
@@ -23,7 +22,7 @@ func (t Time) UnixMilli() int64 {
 	return t.UnixNano() / int64(time.Millisecond)
 }
 
-func NewRealTime () TiketTime {
+func NewRealTime() AndreTime {
 	return &RealTime{}
 }
 
@@ -31,13 +30,13 @@ func (rt *RealTime) Now() time.Time {
 	return time.Now()
 }
 
-func NewFakeTime () TiketTime {
+func NewFakeTime() AndreTime {
 	return &FakeTime{
 		time: time.Date(2020, time.August, 31, 0, 0, 0, 0, time.UTC),
 	}
 }
 
-func NewFakeTimeAt (t time.Time) TiketTime {
+func NewFakeTimeAt(t time.Time) AndreTime {
 	return &FakeTime{
 		time: t,
 	}

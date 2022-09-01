@@ -3,10 +3,10 @@ package echokit
 import (
 	"io"
 
+	"github.com/AndreeJait/GO-ANDREE-UTILITIES/logs"
 	"github.com/labstack/gommon/log"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
-	"github.com/AndreeJait/GO-ANDREE-UTILITIES/logs"
 )
 
 type LoggerWrapper struct {

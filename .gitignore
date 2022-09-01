@@ -19,8 +19,6 @@ vendor/
 .idea
 *.iml
 
-TIX-HOTEL-UTILITIES-GO
 *.log
 main.go
 main
-TIX-HOTEL-TESTING-ENGINE-BE/TIX-HOTEL-TESTING-ENGINE-BE
